@@ -1,0 +1,12 @@
+[Unit]
+Description=chatgpt
+After=network.target
+
+[Service]
+User=root
+WorkingDirectory=/root/workspace
+ExecStart=/usr/bin/python3 /root/workspace/chengAiBox-backend/main.py
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
